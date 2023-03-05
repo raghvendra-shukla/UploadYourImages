@@ -10,7 +10,7 @@ connectToMongo();// calling db to connect
 const Image=require("./Imageschema");
 
 const app=express();
-const port=8000;
+const port=8000 || process.env.PORT;
 
 app.set("view engine","ejs");
 app.use(cors());
